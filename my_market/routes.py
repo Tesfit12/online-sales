@@ -399,7 +399,3 @@ def laptops():
     page = flask.request.args.get('page', 1, type=int)
     products = models.Product.query.order_by(models.Product.date_posted.desc()).paginate(page=page, per_page=40)
     return flask.render_template('laptops.jin', products=products)
-
-
-
-#https://my-online-marketing.herokuapp.com/
